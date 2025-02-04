@@ -7,12 +7,6 @@
         name: httpd
         state: latest
 
-    - name: Enable HTTPD Service
-      service:
-        name: httpd
-        state: restarted
-        enabled: true
-
     - name: Deploy content to webservers
       template:
         src: template/index.html.j2
