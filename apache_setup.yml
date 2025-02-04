@@ -1,5 +1,6 @@
 - name: Install and Configure Webservers.
   hosts: all
+  gather_facts: false
   tasks:
     - name: Install HTTPD package
       dnf:
@@ -11,6 +12,10 @@
         name: httpd
         state: restarted
         enabled: true
+
+    - name: Open firewall connection
+      firewalld:
+        
 
     - name: Deploy content to webservers
       template:
