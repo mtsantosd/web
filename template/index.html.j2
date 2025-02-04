@@ -1,2 +1,6 @@
-<b> Webserver:</b> {{ ansible_facts['fqdn'] }} <br>
-<b> O.S Family:</b> {{ ansible_os_family }} <br>
+Current Host: {{ ansible_facts['fqdn'] }} <br>
+Host IP Address: {{ ansible_facts['default_ipv4']['address'] }} <br>
+Server list: <br>
+{% for host in groups['all'] %}
+{{ host }} <br>
+{% endfor %}
