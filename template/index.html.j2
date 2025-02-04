@@ -1,6 +1,8 @@
-Current Host: {{ ansible_facts['fqdn'] }} <br>
-Host IP Address: {{ ansible_facts['default_ipv4']['address'] }} <br>
+Current Host: {{ ansible_hostname }} <br>
+Host IP Address: {{ ansible_enp2s0['ipv4']['address'] }} <br>
 Server list: <br>
 {% for host in groups['Web'] %}
 {{ host }} <br>
 {% endfor %}
+
+
