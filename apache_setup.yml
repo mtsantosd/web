@@ -13,10 +13,6 @@
         state: restarted
         enabled: true
 
-    - name: Open firewall connection
-      firewalld:
-        
-
     - name: Deploy content to webservers
       template:
         src: template/index.html.j2
