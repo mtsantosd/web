@@ -1,6 +1,5 @@
 - name: Install and Configure Webservers.
   hosts: all
-  gather_facts: false
   tasks:
     - name: Install HTTPD package
       dnf:
